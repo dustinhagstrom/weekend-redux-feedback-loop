@@ -1,17 +1,34 @@
-import React from 'react';
-import axios from 'axios';
-import './App.css';
+import React from "react";
+import axios from "axios";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
+import "./App.css";
+import Header from "../Header/Header";
+import SurveyQuestionComponent from "../SurveyQuestionComponent/SurveyQuestionComponent";
+import { Provider } from "react-redux";
+
+import store from "../../redux/store";
+import surveyQuestions from "../../utils/surveyQuestions";
 
 function App() {
-
-  return (
-    <div className='App'>
-      <header className='App-header'>
-        <h1 className='App-title'>Feedback!</h1>
-        <h4>Don't forget it!</h4>
-      </header>
-    </div>
-  );
+    return (
+        <Provider store={store}>
+            <Router>
+                <div className="App">
+                    <Header />
+                    {surveyQuestions.map((question, i) => (
+                        <SurveyQuestionComponent
+                            key={i}
+                            questionText={question.questionText}
+                            answerLabel={question.answerType}
+                            answerType={question.answerType}
+                            thisUrl={question.thisUrl}
+                            nextUrl={question.nextUrl}
+                        />
+                    ))}
+                </div>
+            </Router>
+        </Provider>
+    );
 }
 
 export default App;
