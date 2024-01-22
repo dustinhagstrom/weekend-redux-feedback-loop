@@ -22,7 +22,7 @@ export default function NavButtonComponent({
     const addDataToReducer = () => {
         dispatch({
             type: "ADD_FEEDBACK",
-            data: { [`${questionKey}`]: `${inputValue}` },
+            payload: { [`${questionKey}`]: `${inputValue}` },
         });
     };
 
