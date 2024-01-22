@@ -1,5 +1,6 @@
 export default [
     {
+        questionKey: "Feelings",
         questionText: "How are you feeling today?",
         answerLabel: "Feeling?",
         answerType: "number",
@@ -7,6 +8,7 @@ export default [
         nextUrl: "/understanding",
     },
     {
+        questionKey: "Understanding",
         questionText: "How well are you understanding the content?",
         answerLabel: "Understanding?",
         answerType: "number",
@@ -14,6 +16,7 @@ export default [
         nextUrl: "/support",
     },
     {
+        questionKey: "Support",
         questionText: "How well are you being supported?",
         answerLabel: "Support?",
         answerType: "number",
@@ -21,10 +24,11 @@ export default [
         nextUrl: "/comment",
     },
     {
+        questionKey: "Comments",
         questionText: "Any comments you want to leave?",
         answerLabel: "Comments",
         answerType: "text",
         thisUrl: "/comment",
-        nextUrl: "/comment", // TODO gotta put something here
+        nextUrl: "/review",
     },
 ];
