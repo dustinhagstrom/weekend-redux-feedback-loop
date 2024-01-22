@@ -12,7 +12,7 @@ export default function SuccessComponent() {
     return (
         <>
             <h2>Thank You!</h2>
-            <button onClick={doAnotherSurvey}>Leave New Feedback</button>
+            <button data-testid="next" onClick={doAnotherSurvey}>Leave New Feedback</button>
         </>
     );
 }

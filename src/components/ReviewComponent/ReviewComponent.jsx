@@ -39,7 +39,7 @@ export default function ReviewComponent() {
                     }
                 })}
             </ul>
-            <button onClick={(e) => submitHandler(e)}>Submit</button>
+            <button data-testid="next" onClick={(e) => submitHandler(e)}>Submit</button>
         </>
     );
 }
